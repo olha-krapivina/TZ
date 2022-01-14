@@ -1,0 +1,241 @@
+@import "fonts";
+@import "variables";
+
+// reset
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color_blue;
+}
+html, body{
+    height: 100%;
+    background: $color_bg;
+}
+a{
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #000;
+    text-decoration: none;
+}
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+ul,
+ol,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img{
+    vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    margin: 0;
+}
+p, span{
+    padding: 0;
+    margin: 0;
+}
+
+// tech classes
+
+._wrapper{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    flex: 1 1 auto;
+}
+
+// header
+
+.header{
+    background: $color_white;
+    .header__nav{
+        padding: 15px 0;
+
+        .nav__top{
+            margin: 0 13px 20px 0;
+            .dropdown{
+                margin: 0 28px 0 0;
+                .btn{
+                    position: relative;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 17px;
+                    line-height: 24px;
+                    color: #ABB2BA;
+                    padding: 0;
+
+                    @media screen and (max-width: 575px) {
+                        font-size: 15px;
+                    }
+
+                    &::after{
+                        position: absolute;
+                        content: url(../img/header/glyphicon_chevron-down.svg);
+                        top: 2px;
+                        right: -18px;
+                    }
+                    &:focus,
+                    &:active,
+                    &:hover{
+                        border: 0;
+                        outline: none;
+                    }
+                }
+
+                .dropdown-menu{
+                    .dropdown-item{
+                        font-family: 'Arial', sans-serif;
+                        font-size: 17px;
+                        line-height: 24px;
+                        color: #ABB2BA;
+                        @media screen and (max-width: 575px) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            .nav__applicant-link{
+                position: relative;
+                color: #ABB2BA;
+                @media screen and (max-width: 575px) {
+                    font-size: 15px;
+                }
+                &::after{
+                    position: absolute;
+                    content: url(../img/header/glyphicon_chevron-right.svg);
+                    top: 3px;
+                    right: -17px;
+                }
+            }
+        }
+
+        .header__links{
+            margin: 0 23px 0 0;
+            @media screen and (max-width: 991px) {
+                margin: 0;
+            }
+            
+            .header__menu-list{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .header__menu-item-1,
+                .header__menu-item-2{
+                    margin: 0 40px 0 0;
+                    @media screen and (max-width: 991px) {
+                        margin: 0 20px 0 0;
+                    }
+                }
+
+                .header__menu-item-3{
+                    margin: 0 40px 0 0;
+                    @media screen and (max-width: 991px) {
+                        margin: 0;
+                    }
+                }
+
+                .header__menu-item-4{
+                    @media screen and (max-width: 991px) {
+                        display: none;
+                    }
+                }
+
+                .header__menu-item{
+                    .header__menu-link{
+                        position: relative;
+
+                        .header__link-desk{
+                            font-size: 20px;
+                            font-weight: 700;
+                            color: $color_blue;
+                            @media screen and (max-width: 991px) {
+                                display: none;
+                            }
+                        }
+
+                        .header__link-mob{
+                            display: none;
+                            font-size: 11px;
+                            font-weight: 400;
+                            @media screen and (max-width: 991px) {
+                                display: block;
+                            }
+                        }
+
+                        .header__menu-img{
+                            display: none;
+                            @media screen and (max-width: 991px) {
+                                display: block;
+                            }
+                        }
+
+                        .counter{
+                            position: absolute;
+                            display: inline-block;
+                            background: $color_pink;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: $color_white;
+                            border-radius: 100px;
+                            padding: 5px 10px;
+                            top: 0px;
+                            right: -23px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header__logo{
+            width: 151px;
+            @media screen and (max-width: 575px) {
+                width: 40px;
+            }
+            .header-logo-des,
+            .header-logo-mob{
+                width: 100%;
+            }
+            .header-logo-des{
+                @media screen and (max-width: 575px) {
+                    display: none;
+                }
+            }
+            .header-logo-mob{
+                display: none;
+                @media screen and (max-width: 575px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+._header__shadow{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -13px;
+        width: 100%;
+        height: 13px;
+        background: linear-gradient(93.65deg, #DE216B -5.03%, #009FF4 103.91%, #8D4F9D 103.91%);
+    }
+}
