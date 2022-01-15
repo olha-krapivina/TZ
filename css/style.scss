@@ -30,7 +30,7 @@ a{
     &:hover,
     &:active,
     &:focus{
-        color: $color_pink !important;
+        color: $color_pink;
     }
 }
 *, *::before, *::after{
@@ -246,6 +246,67 @@ p, span{
     }
 }
 
+// main
+.main{
+    padding: 0 0 60px 0;
+    @media screen and (max-width: 575px) {
+        padding: 0 0 30px 0;
+    }
+    p{
+        color: $color_black;
+        margin: 20px 0;
+    }
+    .message{
+        font-weight: 700;
+        margin: 0;
+    }
+    .form__section{
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 575px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        form{
+            margin: 0 20px 0 0;
+            input[type=button]{
+                width: 198px;
+                height: 40px;
+                background: $color_green;
+                color: $color_white;
+                font-weight: 700;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .form__link{
+            color: $color_green;
+            margin: 0;
+            a{
+                color: $color_green;
+                text-decoration: underline;
+            }
+            @media screen and (max-width: 575px) {
+                margin: 5px 0 0 0;
+            }
+        }
+    }
+}
+
+h1{
+    margin: 30px 0 20px 0;
+    font-size: 32px;
+    line-height: 35px;
+    color: $color_black;
+    font-weight: 700;
+
+    @media screen and (max-width: 575px) {
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
+
 // footer
 
 .footer{
@@ -312,8 +373,6 @@ p, span{
 
         .footer__btn{
             button{
-                // width: 189px;
-                // height: 40px;
                 background: $color_white;
                 border-radius: 5px;
                 border: 1px solid $color_blue;
@@ -335,6 +394,7 @@ p, span{
         }
         .footer__btn-applicant{
             display: none;
+            padding: 10px 0;
             @media screen and (max-width: 575px) {
                 display: block;
             }
