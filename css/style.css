@@ -38,6 +38,12 @@ a {
   line-height: 24px;
   color: #000;
   text-decoration: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+a:hover, a:active, a:focus {
+  color: #E42469 !important;
 }
 
 *, *::before, *::after {
@@ -89,6 +95,7 @@ p, span {
 
 .header {
   background: #fff;
+  margin: 0 0 30px 0;
 }
 
 .header .header__nav {
@@ -171,19 +178,6 @@ p, span {
   }
 }
 
-.header .header__nav .header__links .header__menu-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .header .header__nav .header__links .header__menu-list .header__menu-item-1,
 .header .header__nav .header__links .header__menu-list .header__menu-item-2 {
   margin: 0 40px 0 0;
@@ -231,6 +225,7 @@ p, span {
 .header .header__nav .header__links .header__menu-list .header__menu-item .header__menu-link .header__link-mob {
   display: none;
   font-size: 11px;
+  line-height: 13px;
   font-weight: 400;
 }
 
@@ -305,5 +300,162 @@ p, span {
   width: 100%;
   height: 13px;
   background: linear-gradient(93.65deg, #DE216B -5.03%, #009FF4 103.91%, #8D4F9D 103.91%);
+}
+
+.footer {
+  background: #fff;
+  border-top: 1px solid #E42469;
+  padding: 30px 0;
+}
+
+.footer .footer__top-section {
+  border-bottom: 1px solid #E9EBED;
+  padding: 0 0 20px 0;
+}
+
+@media screen and (max-width: 575px) {
+  .footer .footer__top-section {
+    border-bottom: none;
+  }
+}
+
+.footer .footer__top-section .dropdown {
+  margin: 0 28px 0 0;
+}
+
+.footer .footer__top-section .dropdown .btn {
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+  color: #0094DF;
+  padding: 0;
+}
+
+.footer .footer__top-section .dropdown .btn::after {
+  position: absolute;
+  content: url(../img/footer/glyphicon_chevron-down-blue.svg);
+  top: 2px;
+  right: -18px;
+}
+
+.footer .footer__top-section .dropdown .btn:focus, .footer .footer__top-section .dropdown .btn:active, .footer .footer__top-section .dropdown .btn:hover {
+  border: 0;
+  outline: none;
+}
+
+.footer .footer__top-section .dropdown .dropdown-menu .dropdown-item {
+  font-family: 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+  color: #0094DF;
+}
+
+.footer .footer__top-section .footer__links-apps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .footer__top-section .footer__links-apps .footer__img-link {
+  width: 140px;
+}
+
+.footer .footer__top-section .footer__links-apps .footer__img-link img {
+  width: 100%;
+}
+
+.footer .footer__top-section .footer__links-apps .footer__img-link:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+
+@media screen and (max-width: 767px) {
+  .footer .footer__top-section .footer__links-apps {
+    display: none;
+  }
+}
+
+.footer .footer__top-section .footer__btn button {
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #0094DF;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.footer .footer__top-section .footer__btn button span {
+  font-weight: 700;
+}
+
+.footer .footer__top-section .footer__btn button img {
+  margin: 0 0 0 10px;
+}
+
+.footer .footer__top-section .footer__btn-employer {
+  margin: 0 0 0 30px;
+}
+
+@media screen and (max-width: 575px) {
+  .footer .footer__top-section .footer__btn-employer {
+    display: none;
+  }
+}
+
+.footer .footer__top-section .footer__btn-applicant {
+  display: none;
+}
+
+@media screen and (max-width: 575px) {
+  .footer .footer__top-section .footer__btn-applicant {
+    display: block;
+  }
+}
+
+.footer .footer__top-section .footer__links {
+  margin: 20px 0 10px 0;
+}
+
+@media screen and (max-width: 575px) {
+  .footer .footer__top-section .footer__links {
+    margin: 5px 0 10px 0;
+  }
+}
+
+.footer .footer__top-section p {
+  color: #6B7886;
+}
+
+@media screen and (max-width: 575px) {
+  .footer .footer__top-section p {
+    margin: 10px 0 0 0;
+  }
+}
+
+.footer .footer__bottom-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0 0 0;
+}
+
+@media screen and (max-width: 575px) {
+  .footer .footer__bottom-section {
+    display: none;
+  }
+}
+
+.footer .footer__bottom-section p {
+  color: #6B7886;
+}
+
+.footer .footer__bottom-section p span {
+  color: red;
+}
+
+.footer .footer__links a {
+  color: #6B7886;
 }
 /*# sourceMappingURL=style.css.map */
